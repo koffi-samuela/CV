@@ -180,25 +180,19 @@
 
 @media screen and (max-width : 768px){
   .hero_banner{
-    background: url('/images/bg_mobile2.png') fixed no-repeat;
+    background: url('../../assets/img/bg_mobile2.png') fixed no-repeat;
     background-size:cover;
-    height: 75vh;
+    height: 85vh;
     .principalText {
-      height: 55vh;
+      height: 65vh;
       &__title{
        font-size: 2.8rem;
       }
       &__desc{
         font-size: .9rem;
-        // text-align: center;
-        // font-size: 1.5rem;
         letter-spacing: 1.2px;
-        // margin: 3vh 0;
     }
   }
-    //  .contactME{
-    //   display: none;
-    //  }
      .btnContact{
       position: inherit;
       display: block;
@@ -218,4 +212,8 @@
     align-items: end;
     gap: 10px;
 }
+.cta_btn{
+  font-size: 12px;
+}
+
 }
