@@ -3,8 +3,6 @@
 @use '../../assets/styles/sass/abstracts/variables.scss' as v;
 #presentation{
     padding: 5vh 5vh  2vh 5vh;
-    // margin-top: 3vh;
-    // padding: 0 2vh;
     background-color:  #d30431;
     .aboutMe{
       margin-bottom: 3vh;
@@ -22,21 +20,12 @@
       width: 40%;
     }
     h2{
-      // font-family: 'Permanent Marker', cursive;
       font-family: 'mario';
       letter-spacing: 1px;
       text-align: left;
-      //autre police dans le thàme de jeux video
 
     }
-    // @for $i from 1 through 12 {
-    //   $color: nth(v.$colors, $i % 4 + 1); // Utilisation d'un tableau de couleurs
-    //   h2 span:nth-child(#{$i}) {
-    //     text-shadow: 6px 6px 6px #000000;
-    //     color: $color; // Applique la couleur spécifique à chaque lettre
-    //     display: inline-block; // Pour que chaque lettre occupe seulement l'espace nécessaire
-    //   }
-    // }
+
     .aboutMe__texte p{
       color: #ffffff ;
       margin: 4vh 0;
@@ -52,40 +41,11 @@
         // display: none;
         visibility: hidden;
         font-family: 'mario';
-        // color: #0bb7fb;
-        // transition: visibily 0.2s ease-in;
       }
     }
     .marioText{
       margin-top: 2vh;
     }
-    // .marioText ul{
-    //   // opacity: 0.5;
-    //   font-family: 'supermario';
-    //   list-style:none;
-    //   @include m.dflex(row,space-between,center );
-    //   // gap: 3vw;
-
-    //   li{
-    //     opacity: 0.1;
-    //     font-size: 18px;
-    //     animation: light 2s infinite alternate;
-    //   }
-    //   @for $i from 1 through 3 {
-    //     $text: unquote('Super Mario'); // Texte à boucler
-    //     @for $j from 1 through length($text) {
-    //       $color: nth(v.$colors, $j % 4 + 1); // Utilisation d'un tableau de couleurs
-    //        li:nth-child(#{$i}) {
-    //         text-shadow: 6px 6px 6px #000000;
-    //         display: inline-block; // Pour que chaque lettre occupe seulement l'espace nécessaire
-    //         &:nth-child(#{$j}) {
-    //           color: $color; // Applique la couleur spécifique à chaque lettre
-              
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
     @keyframes light {
       to {
           opacity: 0.6; /* Opacité réduite pendant le scintillement */

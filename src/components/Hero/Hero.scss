@@ -7,9 +7,7 @@
     border-radius: 0;
     padding: 1vh 0;
     height: 100vh;
-    // background: url('../img/Group\ 6.png') fixed  no-repeat;
     background: url('../../assets/img/bg_cv_mario.png') fixed  no-repeat;
-    // background: url('../img/télécharger\ \(8\)\ 1.png') fixed  no-repeat;
     background-size: cover;
 }
 .principalText {
@@ -182,7 +180,7 @@
 
 @media screen and (max-width : 768px){
   .hero_banner{
-    background: url('../../assets/img/bg_mobile2.png') fixed no-repeat;
+    background: url('/images/bg_mobile2.png') fixed no-repeat;
     background-size:cover;
     height: 75vh;
     .principalText {
