@@ -2,13 +2,13 @@
     font-family: 'mario'; 
     src: url('/fonts/SuperMario256.ttf') format('truetype'); 
   }
-  // @font-face {
-  //   font-family: 'supermario'; 
-  //   src: url('./../../../fonts/SuperMario64.ttf') format('truetype'); 
-  // }
+  @font-face {
+    font-family: 'font_family'; 
+    src: url('/fonts/123Marker.ttf') format('truetype'); 
+  }
 
 $font_mario : 'mario';
-$font_supermario : 'supermario';
+$font_family : 'font_family';
 $font_inria: 'Inria Serif', serif;
 $LetterColorBlue:#0bb7fb;
 $LetterColorYellow:#FBD001;
