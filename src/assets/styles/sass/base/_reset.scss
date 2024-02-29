@@ -1,0 +1,43 @@
+@use '../abstracts/variables.scss' as v ;
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    // background-color:v.$bg-100 ;
+    background-color:rgb(22, 22, 22) ;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+
+
+
+}
+// img{
+//     border-radius: 10px;
+// }
+// a{
+//     text-decoration: none;
+//     color: white;
+// }
+section{
+    margin: 6vh 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+  }
+// button{
+//     color: white;
+// }
+// h1,h2,h3,h4{
+//     font-family: v.$font_inria;
+
+// }
+ul{
+margin: 0;
+}
+@media screen and (max-width : 768px){
+  section{
+    width: 90%;
+  }
+}

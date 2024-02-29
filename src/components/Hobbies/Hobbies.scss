@@ -1,0 +1,131 @@
+@use '../../assets/styles/sass/abstracts/mixins.scss' as m;
+@use '../../assets/styles/sass/abstracts/variables.scss' as v;
+
+#hobbies{
+    .hobbies_icon{
+      font-size: 80px;
+      margin-bottom: 2vh;
+    }
+    padding: 5vh 4vh;
+    .peach_section{
+      @include m.dflex(row,center,center );
+      gap: 7vw;
+      &__item{
+        margin: 5vh 0;
+        // color: black;
+        @include m.dflex(column,center,center );
+        width: 25%;
+        padding: 2vh 00.7vw;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.300);
+    background-color:  #ff004c;
+
+        border-radius: 15px;
+        border: 1px solid white;
+        transition: all  .4s ease-in-out;
+
+        &:hover{
+          box-shadow: 0 0 0 1px rgb(255, 255, 255), inset 0 0 0 1px rgb(255, 255, 255);
+          transform: translateY(-8px) scale(.96);
+  
+        }
+
+        }
+    }
+    .stars{
+      @include m.dflex(row,center,center );
+      gap: 5vw;
+      margin-bottom: 3vh;
+      // gap: 20vw;
+      img{
+        width: 55px;
+        animation: flicker 1s infinite alternate;
+      }
+      h2{
+    font-family: 'mario'; 
+
+      }
+  
+    @keyframes flicker {
+      to {
+          opacity: 0.8; /* Opacité réduite pendant le scintillement */
+      }
+  }
+    }
+    .imgPeach{
+      margin-top: 3vh ; 
+      @include m.dflex(row,center,center );
+      img{
+        max-width:50px;
+        object-fit: cover;
+      }
+    }
+  }
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  #hobbies{
+    padding: 3vh 3vw;
+    .peach_section{
+      @include m.dflex(column,center,center );
+    gap: 3vh;
+    &__item{
+      margin: .5vh 0;
+      
+      width: 100%;
+      // color: black;
+      @include m.dflex(row,center,center );
+      width: 100% !important;
+      padding: 2vh 00.7vw;
+      gap: 5vw;
+      // img{
+        // // display: none;
+        
+        // }
+        .hobbies_icon{
+          font-size: 100px;
+          margin-bottom: 2vh;
+          // width: 30%;
+        }
+      &:hover{
+        box-shadow: 0 0 0 1px rgb(255, 255, 255), inset 0 0 0 1px rgb(255, 255, 255);
+        transform: translateY(-8px) scale(.96);
+  
+      }
+  
+      }
+  }
+}
+  
+}
+@media screen and (max-width : 768px){
+  #hobbies{
+    padding: 3vh 3vw;
+    .hobbies_icon{
+      font-size: 60px;
+      margin-bottom: 2vh;
+    }
+  .peach_section{
+    @include m.dflex(column,center,center );
+    gap: 3vh;
+    &__item{   
+      margin: 1vh 0;
+      width: 100%;
+      @include m.dflex(column,center,center );
+      width: 100% !important;
+      padding: 2vh 2vw;
+      &:hover{
+        box-shadow: 0 0 0 1px rgb(255, 255, 255), inset 0 0 0 1px rgb(255, 255, 255);
+        transform: translateY(-8px) scale(.96);
+  
+      }
+  
+      }
+    }
+    .stars{
+      img{
+        width: 45px;
+        // animation: flicker 1s infinite alternate;
+      }
+  }
+}
+}
+

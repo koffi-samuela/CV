@@ -1,0 +1,104 @@
+@use '../../assets/styles/sass/abstracts/mixins.scss' as m;
+@use '../../assets/styles/sass/abstracts/variables.scss' as v;
+#experience-section {
+    background-color: #5b0909; /* Couleur de fond inspirée de Bowser */
+    padding: 40px;
+    text-align: center;
+    // width: 90%;
+    margin: auto;
+    border-radius: 15px;
+
+    .experience-card {
+      background-color: #8b0000; /* Couleur de fond sombre pour les cartes d'expérience */
+      color: #ffffff; /* Texte blanc pour le contraste */
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre pour un effet 3D */
+      transition: transform 0.3s ease;
+    }
+    
+    .experience-card:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Utilisez une police de caractères personnalisée qui évoque l'univers de Mario */
+    .experience-title {
+      font-size: 24px;
+      margin-bottom: 3vh;
+      // margin: 2% 0;
+      font-weight: 700;
+      
+    }
+    
+    .experience-description {
+      font-size: 16px;
+      padding: 0 2vw;
+    }
+    .experience-icon{
+      width: 65px;
+      margin-bottom: 2vh;
+    }
+  }
+  .title_exp{
+    text-align: center;
+    font-family: 'mario'; 
+    margin: 5vh 0;
+
+  }
+  
+  // @for $i from 1 through 15 {
+  //   $color: nth(v.$colors, $i % 4 + 1); // Utilisation d'un tableau de couleurs
+  //   h2 span:nth-child(#{$i}) {
+  //     text-shadow: 6px 6px 6px #000000;
+  //     color: $color; // Applique la couleur spécifique à chaque lettre
+  //     display: inline-block; // Pour que chaque lettre occupe seulement l'espace nécessaire
+  //   }
+  // }
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  #experience-section {
+    background-color: #5b0909; /* Couleur de fond inspirée de Bowser */
+    padding: 20px;
+
+    .experience-card {
+      border-radius: 10px;
+      padding: 10px;
+      margin: 15px;
+    }
+    .experience-title {
+      font-size: 19px;
+    }
+    
+    .experience-description {
+      font-size: 14px;
+    }
+    .experience-icon{
+      width: 70px;
+    }
+  }
+}
+
+@media screen and (max-width : 768px){
+  #experience-section {
+    background-color: #5b0909; /* Couleur de fond inspirée de Bowser */
+    padding: 10px;
+
+    .experience-card {
+      border-radius: 10px;
+      padding: 10px;
+      margin: 5px;
+    }
+    .experience-title {
+      font-size: 17px;
+    }
+    
+    .experience-description {
+      font-size: 14px;
+    }
+    .experience-icon{
+      width: 60px;
+      margin: 1vh 0;
+    }
+  }
+}
+  

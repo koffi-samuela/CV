@@ -1,0 +1,65 @@
+@use '../../assets/styles/sass/abstracts/mixins.scss' as m;
+@use '../../assets/styles/sass/abstracts/variables.scss' as v;
+
+
+.skill{
+    &__title{
+        h2{
+            text-align: center;
+            margin: 5vh 0;
+      font-family: 'mario'; 
+
+        }
+    }
+    &__content{
+        .title{
+            .mushroom_img{
+                width: 35px;
+                height: 35px;
+            }
+            border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+            h4{
+                padding-bottom: 1vh;
+            }
+        }
+        .items{
+  @include m.dflex(row,start ,center );
+            padding: 3vh 0 !important;
+            flex-wrap: wrap;
+        }
+        &__back,&__front,&__design,&__cms,&__versionning{
+            margin: 6vh 0;
+            // h4{
+            //     color: red;
+            // }
+    }
+}
+    // @for $i from 1 through 15 {
+    //   $color: nth(v.$colors, $i % 4 + 1); // Utilisation d'un tableau de couleurs
+    //   h2 span:nth-child(#{$i}) {
+    //     text-shadow: 6px 6px 6px #000000;
+    //     color: $color; // Applique la couleur spécifique à chaque lettre
+    //     display: inline-block; // Pour que chaque lettre occupe seulement l'espace nécessaire
+    //   }
+    // }
+}
+
+@media screen and (max-width : 768px){
+.skill{
+    .title{
+        h4{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
+    .items{
+  @include m.dflex(column,center ,center );
+  flex-direction: column !important;
+
+  &__back,&__front,&__design,&__cms,&__versionning{
+    margin: 4vh 0;
+    // width: 100% !important;
+}
+    }
+  }

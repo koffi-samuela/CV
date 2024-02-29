@@ -1,0 +1,129 @@
+//NAVBAR
+@use '../../assets/styles/sass/abstracts/mixins.scss' as m;
+@use '../../assets/styles/sass/abstracts/variables.scss' as v;
+
+header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .BurgermenuIcone{
+    display: none;
+  }
+  .navRight{
+    @include m.dflex(row,space-evenly ,center );  
+  }
+  header nav{
+    @include m.dflex(row,space-between ,center );
+    padding: 1vh 0;
+    transition:0.3s;
+      // background-color: #000000; 
+      padding: 0 5%;
+      padding-top: 1.5vh;
+      transition: all ease-in-out 0.5s;
+  }
+  .navRight{
+    padding: 1vh 0.5vh;
+  }
+  .navRight ul{
+    @include m.dflex(row,space-between ,center );
+    list-style: none;
+    gap: 2rem;
+    li{
+      @include m.dflex(row,space-between ,center );
+      gap:2px
+    }
+}
+.logo {
+  transition: transform 2s; 
+  width: 70px;
+  transition: width ease-in-out 0.5s;
+}
+
+.logo:hover {
+  transform: rotateY(360deg); 
+}
+header a:hover{
+  color: v.$LetterColorRed;
+    transition:0.3s;
+    transform: scale(1.05);
+  }
+  .burgerMenu {
+    text-align: center;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    transition: all 1s ease;
+    background-color: #ffffff;
+    z-index: 999;
+  }
+  
+  .close{
+    @include m.dflex(row,space-between ,center );
+    padding: 0 3vh;
+  
+  }
+  .burgerMenu.active {
+    right: 0;
+  }
+  
+  .burgerMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .burgerMenu li {
+    border-bottom: 1px solid #ffffff8a;
+    @include m.dflex(row,center ,center );
+    
+  }
+  
+  // .burgerMenu li:last-child {
+  //   // border-bottom: none;
+
+  // }
+  
+  .burgerMenu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    transition:0.3s;
+  }
+
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px){
+  header nav{
+    @include m.dflex(row,center ,center );
+    // padding: 2vh 0;
+    padding: 2vh 3%;
+  }
+  .logo {
+    width: 50px;
+  }
+  }
+
+  @media screen and (max-width : 768px){
+    .BurgermenuIcone,.navLeft{
+      display: block;
+  }
+  .navRight{
+  display: none;
+  }
+  header nav{
+      justify-content: space-between;
+      // padding: 1vh;
+      padding: 1vh 4% !important;
+
+  }
+
+  .burgerMenu {
+    background-color: #031036;
+  }
+  .logo { 
+    width: 60px !important;
+  }
+}

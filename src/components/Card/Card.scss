@@ -1,0 +1,53 @@
+@use '../../assets/styles/sass/abstracts/mixins.scss' as m;
+@use '../../assets/styles/sass/abstracts/variables.scss' as v;
+.skill{
+
+  .card{
+      background-color: transparent !important;
+      border-color: rgba(255, 255, 255, 0.425) !important;
+      border-radius: 15px !important;
+      padding: 2vh 1vw !important;
+      transition: border 0.5s ease-in-out;
+      p{
+          margin: 0;
+      }
+      &:hover{
+          border-color: rgb(255, 255, 255) !important;
+  
+      }
+  }
+  .mario {
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out; /* Transition pour l'effet */
+    }
+    
+    .mario.hovered {
+      opacity: 1;
+      // transform: translateY(-100%); /* Déplace l'image vers le haut */
+    }
+    .skill_card{
+      margin:2vh 1vw;
+      width: 30%
+  
+    }
+    .card-body{
+      @include m.dflex(row,center,center );
+      gap: 1vw !important;
+  
+    }
+}
+@media screen and (max-width : 768px){
+  .skill_card{
+    margin:2vh 1vw;
+    width: 90% !important;
+
+  }
+  .card-title{
+  font-size: 14px !important;
+  }
+  .card-body{
+    // @include m.dflex(row,center,center );
+    gap: 2vw !important;
+
+  }
+}

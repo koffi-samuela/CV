@@ -1,0 +1,191 @@
+
+@use '../../assets/styles/sass/abstracts/mixins.scss' as m;
+@use '../../assets/styles/sass/abstracts/variables.scss' as v;
+#presentation{
+    padding: 5vh 5vh  2vh 5vh;
+    // margin-top: 3vh;
+    // padding: 0 2vh;
+    background-color:  #d30431;
+    .aboutMe{
+      margin-bottom: 3vh;
+      @include m.dflex(row,center ,center );
+      gap: 10vw;
+      .profile{
+        width: 50%;
+        img{
+          width: 300px;
+        }
+      }
+    }
+    .aboutMe__text{
+      // @include m.dflex(column,center ,center );
+      width: 40%;
+    }
+    h2{
+      // font-family: 'Permanent Marker', cursive;
+      font-family: 'mario';
+      letter-spacing: 1px;
+      text-align: left;
+      //autre police dans le thàme de jeux video
+
+    }
+    // @for $i from 1 through 12 {
+    //   $color: nth(v.$colors, $i % 4 + 1); // Utilisation d'un tableau de couleurs
+    //   h2 span:nth-child(#{$i}) {
+    //     text-shadow: 6px 6px 6px #000000;
+    //     color: $color; // Applique la couleur spécifique à chaque lettre
+    //     display: inline-block; // Pour que chaque lettre occupe seulement l'espace nécessaire
+    //   }
+    // }
+    .aboutMe__texte p{
+      color: #ffffff ;
+      font-family: 'Permanent Marker', cursive;
+      margin: 4vh 0;
+      font-size: 17px
+    }
+    .mariocar{
+      @include m.dflex(row,end,center );
+      padding: 0 1vw;
+      img{
+        width: 45px;
+      }
+      .go{
+        // display: none;
+        visibility: hidden;
+        font-family: 'mario';
+        // color: #0bb7fb;
+        // transition: visibily 0.2s ease-in;
+      }
+    }
+    .marioText{
+      margin-top: 2vh;
+    }
+    .marioText ul{
+      // opacity: 0.5;
+      font-family: 'supermario';
+      list-style:none;
+      @include m.dflex(row,space-between,center );
+      // gap: 3vw;
+
+      li{
+        opacity: 0.1;
+        font-size: 18px;
+        animation: light 2s infinite alternate;
+      }
+      @for $i from 1 through 3 {
+        $text: unquote('Super Mario'); // Texte à boucler
+        @for $j from 1 through length($text) {
+          $color: nth(v.$colors, $j % 4 + 1); // Utilisation d'un tableau de couleurs
+           li:nth-child(#{$i}) {
+            text-shadow: 6px 6px 6px #000000;
+            display: inline-block; // Pour que chaque lettre occupe seulement l'espace nécessaire
+            &:nth-child(#{$j}) {
+              color: $color; // Applique la couleur spécifique à chaque lettre
+              
+            }
+          }
+        }
+      }
+    }
+    @keyframes light {
+      to {
+          opacity: 0.6; /* Opacité réduite pendant le scintillement */
+      }
+  }
+  }
+
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px){
+    #presentation{
+      padding: 5vh 5vh 2vh 5vh;
+      .aboutMe{
+        margin-bottom: 1vh;
+        @include m.dflex(column,center ,center );
+        gap: 5vw;
+        text-align: center;
+        .profile{
+          width: 100%;
+          img{           
+            width: 350px;
+          }
+        }
+      }
+      .aboutMe__text{
+        width: 100%;
+      }
+      .aboutMe__texte p{
+        color: #ffffff ;
+      }
+      .mariocar{
+      @include m.dflex(row,space-between,center );
+        h3{
+          font-family: 'mario';
+        }
+      }
+      .marioText{
+        margin-top: 2vh;
+      }
+      .marioText ul{
+        font-family: 'supermario';
+        list-style:none;
+        @include m.dflex(row,space-between,center );
+    
+        li{
+          opacity: 0.1;
+          font-size: 18px;
+          animation: light 2s infinite alternate;
+        }
+      }
+      @keyframes light {
+        to {
+            opacity: 0.6; /* Opacité réduite pendant le scintillement */
+        }
+    }
+      h2{
+          text-align: center;
+        }
+    }
+    .mario_car{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width : 768px){
+    #presentation{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 4vh 2vh;
+      padding-bottom: 2vh;
+      .aboutMe{
+        @include m.dflex(column,center ,center );
+        gap: 5vw;
+        text-align: center;
+      }
+      .profile{
+        width: 100% !important;
+        // max-width: 100%;
+  
+        img{
+          // max-width: 100%;
+          width: 275px !important;
+        }
+      }
+      .aboutMe__texte p{
+        // color: red ;
+        // max-width: 95%;
+        margin: 2vh 0;
+        font-size: 15px;
+      }
+      h2{
+        text-align: center;
+      }
+      .mario_car{
+        display: none;
+      }
+    }
+    .marioText{
+      display: none;
+    }
+    
+  }

@@ -1,0 +1,223 @@
+@use '../../assets/styles/sass/abstracts/mixins.scss' as m;
+@use '../../assets/styles/sass/abstracts/variables.scss' as v;
+
+.hero_banner{
+  margin-top: 0;
+    width: 100%;
+    border-radius: 0;
+    padding: 1vh 0;
+    height: 100vh;
+    // background: url('../img/Group\ 6.png') fixed  no-repeat;
+    background: url('../../assets/img/bg_cv_mario.png') fixed  no-repeat;
+    // background: url('../img/télécharger\ \(8\)\ 1.png') fixed  no-repeat;
+    background-size: cover;
+}
+.principalText {
+    height: 75vh;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &__title{
+      font-family:v.$font_mario;
+        font-size: 6rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 6px 6px 6px #000000; 
+        // }
+        display: inline-block;
+        :nth-child(1){
+          color: v.$LetterColorBlue;
+        }
+        :nth-child(2){
+          color: v.$LetterColorYellow;
+        }
+        :nth-child(3){
+          color: v.$LetterColorRed;
+        }
+        :nth-child(4){
+          color: v.$LetterColorGreen;
+        }
+        :nth-child(5){
+          color: v.$LetterColorBlue;
+        }
+        :nth-child(6){
+          color: v.$LetterColorYellow;
+        }
+        :nth-child(7){
+          color: v.$LetterColorRed;
+        }
+        .k{
+          color: v.$LetterColorGreen;
+        }
+        .o{
+          color: v.$LetterColorBlue;
+        }
+        .f{
+          color: v.$LetterColorYellow;
+        }
+        .f2{
+          color: v.$LetterColorRed;
+        }
+        .i{
+          color: v.$LetterColorGreen;
+        }
+ }
+
+    &__desc{
+      text-align: center;
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      margin: 3vh 0;
+
+      // color: rgb(255, 255, 255) !important;
+      font-family: 'mario'; 
+      span:hover{
+        text-shadow: 6px 6px 6px #000000; 
+        transform: translateY(-20px);
+      }
+    }
+}
+
+//BOUCLE POUR LES COULEURS
+@for $i from 1 through 33 {
+    $color: nth(v.$colors, $i % 4 + 1); // Utilisation d'un tableau de couleurs
+    .principalText__desc span:nth-child(#{$i}) {
+      text-shadow: 6px 6px 6px #000000; 
+  
+      color: $color; // Applique la couleur spécifique à chaque lettre
+    }
+    .principalText__desc span:nth-child(#{$i}):hover {
+      transform: translateY(-20px);
+  
+    }
+    // .principalText__desc span:nth-child(#{$i}) 
+  }
+  .contactME{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    font-weight: 700 !important;
+}
+
+.btnContact{
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    // right: 5;
+}
+.linkedin{
+  color: rgb(0, 170, 255);
+  color: white;
+
+}
+.github{
+  color: white;
+
+}
+.discord{
+  color: rgb(255, 255, 255);
+  
+}
+
+.cta_btn{
+  @include m.dflex(row,center ,center );
+  margin: 3vh 0;
+  button{
+    font-weight: 700;
+    background-color: v.$LetterColorYellow;
+    border: 3px solid black;
+    border-radius: 10px;
+    transition: all ease-in-out 0.3s;
+    &:hover{
+      background-color: v.$LetterColorRed;
+  
+    }
+    a{
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .hero_banner{
+    padding: 1vh 0;
+    height: 70vh;
+    // background: url('../img/Group\ 6.png') fixed  no-repeat;
+    background-size: cover;
+    .principalText {
+      height: 50vh;
+      padding-top: 5vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+      &__title{
+          font-family:'mario';
+          font-size: 3.5rem;
+        }
+        &__desc{
+          font-size: .8rem;
+        }
+      }
+      .contactME{
+        margin: 0 auto;
+        gap: 1vh;
+    }
+}
+
+
+}
+
+@media screen and (max-width : 768px){
+  .hero_banner{
+    background: url('../../assets/img/bg_mobile2.png') fixed no-repeat;
+    background-size:cover;
+    height: 75vh;
+    .principalText {
+      height: 55vh;
+      &__title{
+       font-size: 2.8rem;
+      }
+      &__desc{
+        font-size: .9rem;
+        // text-align: center;
+        // font-size: 1.5rem;
+        letter-spacing: 1.2px;
+        // margin: 3vh 0;
+    }
+  }
+    //  .contactME{
+    //   display: none;
+    //  }
+     .btnContact{
+      position: inherit;
+      display: block;
+      margin: 0 auto;
+      background-color: v.$LetterColorYellow !important;
+      border: #000000 2px solid;
+      // @include dflex(row,center ,center );     
+  }
+  }
+  .contactME{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+}
+}

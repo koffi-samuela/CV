@@ -1,0 +1,107 @@
+@use '../../assets/styles/sass/abstracts/variables.scss' as *;
+@use '../../assets/styles/sass/abstracts/mixins.scss' as m;
+
+
+footer{
+    background-color: #0bb7fb;
+    background-color: #87ceeb; /* Bleu ciel */
+    background-color: #001f3f;
+    padding: 2vh 0;
+    padding-bottom: 0;
+    .footerColumns{
+    padding: 2vh 0;
+
+      a{
+        color:white;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 14px;
+        &:hover{
+          color: $LetterColorRed;
+            transition:0.3s;
+            transform: scale(1.05);
+          }
+      }
+      @include m.dflex(row,space-around ,center );
+      &__center{
+      @include m.dflex(column,space-between ,left );
+      gap: 5px
+      }
+       &__right{
+      @include m.dflex(column,center ,start );
+      p{
+        margin: 0;
+        padding: 1vh 1.5vh;
+        // background-color: #E62311;
+  
+      }
+      h5{
+        text-align: start;
+      }
+  
+      }
+      &__right__item{
+      @include m.dflex(row,center ,center );
+  
+      }
+      .nav_footer{
+      @include m.dflex(column,center ,left );
+      gap: 10px;
+  
+      }
+    }
+    .footer_logo{
+      width:100px
+    }
+    .copy{
+      text-align: center;
+      // background-color: red;
+    background-color: #009ad7;
+
+      p{
+        width: 50%;
+        margin: 0 auto;
+        padding: .7vh 0;
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px){
+
+  }
+  
+  
+  @media screen and (max-width : 768px){
+    footer{
+      .footerColumns{
+        text-align: center;
+        @include m.dflex(column,center ,center );
+        gap: 5vw;
+        &__left, &__right{
+        @include m.dflex(column,center ,center );
+        
+        p{
+          margin: 0;
+          padding: 1vh 2vh;
+    
+        }
+        }
+      }
+      .copy{
+        p{
+          width: 100%;
+          padding:1vh 0;
+          font-size: 12px;
+        }
+      }
+    }
+    .footer_logo{
+      width:90px !important;
+    }
+    .nav_footer{
+      @include m.dflex(column,center ,center );
+      gap: 10px;
+  
+      }
+  }
