@@ -34,9 +34,9 @@
         //  position: relative;
         transition: all .6s ease-in-out;
         // border-radius: 40px 0 0 0; // Ajoute une bordure uniquement à l'angle supérieur gauche
-        p{
-        font-family: 'Permanent Marker', cursive;
-        }
+        // p{
+        // font-family: 'Permanent Marker', cursive;
+        // }
         &__title{
             @include m.dflex(row,left ,center );
             gap: 1vw;
