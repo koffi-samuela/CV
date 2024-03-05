@@ -15,7 +15,7 @@ export default function Hobbies() {
             <div class="peach_section__item">
 
                 <Icon icon="emojione-monotone:basketball" className='hobbies_icon' />
-                <p>Passionnée de basketball, j'adore passé mon temps libre sur un terrain, développant non seulement mes compétences physiques mais aussi ma stratégie et mon esprit d'équipe.</p>
+                <p>Je suis une passionnée de basketball, j'adore passer mon temps libre sur un terrain, développant non seulement mes compétences physiques mais aussi ma stratégie et mon esprit d'équipe.</p>
             </div>
                 <div class="peach_section__item">
                     <Icon icon="bx:book-reader"  className='hobbies_icon' />
