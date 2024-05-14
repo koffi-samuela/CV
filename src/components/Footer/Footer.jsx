@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
             <div className="footerColumns__right__item">
                 <Icon icon="icon-park:mail" className="icon_mail" width="35"/>
-                <p><a href="mailto:samukoffi123gmail.com">samukoffi123gmail.com</a></p>
+                <p><a href="mailto:samukoffi123gmail.com">samukoffi123@gmail.com</a></p>
             </div>
         </div>
     </div>
