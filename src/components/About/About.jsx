@@ -12,7 +12,7 @@ export default function About() {
                         <div class="aboutMe__texte">
                             {/* <h2><span>p</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span></h2> */}
                             <h2>PRESENTATION</h2>
-                                <p>Passionnée par le développement web, j'ai approfondi mes compétences en me spécialisant dans la création d'applications au cours de mon parcours universitaire. Actuellement en recherche d'un stage de 3 mois en développement d'applications et une possibilité d’alternance par la suite à la MANU Amiens, je suis animée par le désir de mettre en œuvre mes compétences dans des projets informatiques, tout en nourrissant ma curiosité pour l'apprentissage continu des langages de programmation.</p>
+                                <p>Au cours de mes études, j'ai développé une réelle passion pour le web en me spécialisant dans la création d'applications. Cette expérience m'a permis d'acquérir des compétences solides et de me familiariser avec divers langages de programmation. Actuellement en quête d'une alternance pour ma troisième année à partir de septembre, mon objectif est d'appliquer mes connaissances dans des projets informatiques captivants et de continuer à progresser dans le domaine de la programmation. Je suis motivée pour apprendre et contribuer de manière proactive à des équipes intéressantes et dynamiques.</p>
                                 <div class="mariocar"> 
                                     {/* <h4 class="go"> Let's gooo !!!</h4> */}
                                     <img src={mario_img} alt=""  class="mario_car"/>
